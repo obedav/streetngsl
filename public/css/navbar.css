@@ -1,0 +1,130 @@
+/* Navigation Bar Styles */
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-menu a {
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover::after {
+    width: 100%;
+}
+
+.navbar-menu a:hover {
+    color: var(--primary);
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Mobile navigation */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    z-index: 99;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+}
+
+.mobile-menu a:hover {
+    background-color: var(--light);
+    color: var(--primary);
+}
+
+/* Show mobile menu when active */
+.mobile-menu.active {
+    display: block;
+}
+
+/* Active link indicator */
+.navbar-menu a.active, 
+.mobile-menu a.active {
+    color: var(--primary);
+}
+
+.navbar-menu a.active::after {
+    width: 100%;
+}
+
+/* Add this to your existing CSS */
+.navbar-logo img {
+    height: 40px; /* Adjust this value to balance with 80px navbar */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it scales down on smaller screens */
+    vertical-align: middle; /* Better alignment */
+}
+
+/* Update your existing navbar CSS */
+.navbar {
+    padding: 5px 0; 
+    min-height: 80px; /* Your specified height */
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center; 
+    height: 80px; /* Your specified height */
+}
+
+/* For mobile responsiveness */
+@media (max-width: 767px) {
+    .navbar-logo img {
+        height: 30px; /* Slightly smaller on mobile */
+    }
+}

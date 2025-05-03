@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles */
+
+/* Base styles for all pages */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.navbar {
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #fff;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 3rem 0 1.5rem;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
+.footer h4, .footer h5 {
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.footer hr {
+    border-color: rgba(255,255,255,0.1);
+    margin: 2rem 0;
+}
+
+.footer address p {
+    margin-bottom: 0.5rem;
+}
