@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="public/css/footer.css">
     <link rel="stylesheet" href="public/css/home.css">
     <link rel="stylesheet" href="public/css/fixes.css">
+    <link rel="stylesheet" href="public/css/home-navbar.css">
     
     <link rel="stylesheet" href="public/css/hero-section.css">
     <!-- Font Awesome -->
@@ -21,8 +22,8 @@
     <nav class="navbar">
         <div class="container navbar-container">
             <a href="index.html" class="navbar-logo">
-                <img src="public/images/logo.png" alt="StreetNG Logo" height="40">
-                <span class="logo-text">Street<span>NG</span></span>
+                <img src="public/images/logo1.png" alt="StreetNG Logo" height="40">
+               <!-- <span class="logo-text">Street<span>NG</span></span>   -->
             </a>
             
             <div class="navbar-menu">
@@ -140,7 +141,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+             
             </div>
         </div>
     </section>
@@ -271,9 +272,9 @@
                         <i class="fas fa-phone"></i>
                     </div>
                     <div>
-                        <p>Tavern: 07069201110</p>
-                        <p>Trendy: 07086067631</p>
-                        <p>Realtors: 09047382343</p>
+                        <p>Tavern: +2347069201110</p>
+                        <p>Trendy: +2347086067631</p>
+                        <p>Realtors: +2349047382343</p>
                     </div>
                 </div>
                 <div class="footer-contact-item">
@@ -299,22 +300,187 @@
     <script src="public/js/navbar-color.js"></script>
     <script src="public/js/hamburger-fix.js"></script>
 
-    <script>
-        // Inline emergency fix for hamburger menu
-        document.addEventListener('DOMContentLoaded', function() {
-            var menuToggle = document.querySelector('.navbar-toggle');
-            var mobileMenu = document.querySelector('.mobile-menu');
-            
-            if (menuToggle && mobileMenu) {
-                menuToggle.onclick = function(e) {
-                    e.preventDefault();
-                    mobileMenu.classList.toggle('active');
-                    console.log('Hamburger clicked, menu is now:', 
-                              mobileMenu.classList.contains('active') ? 'active' : 'inactive');
-                };
-            }
+<script>
+    // Inline emergency fix for hamburger menu
+    document.addEventListener('DOMContentLoaded', function() {
+        var menuToggle = document.querySelector('.navbar-toggle');
+        var mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (menuToggle && mobileMenu) {
+            menuToggle.onclick = function(e) {
+                e.preventDefault();
+                mobileMenu.classList.toggle('active');
+                console.log('Hamburger clicked, menu is now:', 
+                          mobileMenu.classList.contains('active') ? 'active' : 'inactive');
+            };
+        }
+        
+        // Reduce spacing between navbar menu items
+        const navbarMenu = document.querySelector('.navbar-menu');
+        if (navbarMenu) {
+            navbarMenu.style.gap = '1rem'; // Reduce from 2rem to 1rem
+        }
+        
+        // Also adjust individual menu items
+        const navLinks = document.querySelectorAll('.navbar-menu a');
+        navLinks.forEach(link => {
+            link.style.padding = '5px 5px'; // Reduce padding
+            link.style.margin = '0 2px';    // Add minimal margin
         });
-    </script>
+    });
+</script>
+
+    
+<script>
+   
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('home-page');
+        
+        // Apply off-white background to navbar
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            navbar.style.background = 'linear-gradient(to right, rgba(248, 248, 250, 0.95), rgba(245, 245, 250, 0.95))';
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        }
+        
+        // Style all navigation links for dark text on off-white background
+        const navLinks = document.querySelectorAll('.navbar-menu a');
+        navLinks.forEach(link => {
+            link.style.color = '#333333';
+            link.style.textShadow = 'none';
+            link.style.background = 'transparent';
+            link.style.borderRadius = '0';
+            link.style.boxShadow = 'none';
+            
+            // Add hover effect to change text color to blue
+            link.addEventListener('mouseenter', function() {
+                this.style.color = '#3f51b5';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('active')) {
+                    this.style.color = '#333333';
+                }
+            });
+        });
+        
+        // Style active link with indigo accent and underline
+        const activeLink = document.querySelector('.navbar-menu a.active');
+        if (activeLink) {
+            activeLink.style.color = '#3f51b5';
+            activeLink.style.fontWeight = '700';
+            activeLink.style.background = 'transparent';
+            activeLink.style.borderBottom = '2px solid #3f51b5';
+            activeLink.style.boxShadow = 'none';
+        }
+        
+        // Style logo with indigo color
+        const logoSpan = document.querySelector('.navbar-logo span');
+        if (logoSpan) {
+            logoSpan.style.color = '#3f51b5';
+        }
+        
+        // Style mobile menu
+        const mobileMenu = document.querySelector('.mobile-menu');
+        if (mobileMenu) {
+            mobileMenu.style.background = 'rgba(248, 248, 250, 0.98)';
+        }
+        
+        // Style mobile menu items with hover effect
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.style.color = '#333333';
+            link.style.background = 'transparent';
+            
+            // Add hover effect to change text color to blue
+            link.addEventListener('mouseenter', function() {
+                this.style.color = '#3f51b5';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('active')) {
+                    this.style.color = '#333333';
+                }
+            });
+        });
+        
+        // Style active mobile link
+        const activeMobileLink = document.querySelector('.mobile-menu a.active');
+        if (activeMobileLink) {
+            activeMobileLink.style.color = '#3f51b5';
+            activeMobileLink.style.fontWeight = '700';
+            activeMobileLink.style.background = 'transparent';
+            activeMobileLink.style.borderLeft = '3px solid #3f51b5';
+        }
+        
+        // Style toggle button
+        const toggleButton = document.querySelector('.navbar-toggle');
+        if (toggleButton) {
+            toggleButton.style.color = '#3f51b5';
+        }
+    });
+
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+  // Direct application of hamburger fix
+  var menuToggle = document.querySelector('.navbar-toggle');
+  var mobileMenu = document.querySelector('.mobile-menu');
+  
+  if(menuToggle && mobileMenu) {
+    // Style the mobile menu explicitly with inline styles
+    mobileMenu.style.display = 'none';
+    
+    // Apply a direct, inline onclick handler
+    menuToggle.onclick = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Direct, simple toggle with inline styles for guaranteed visibility
+      if(mobileMenu.style.display === 'none') {
+        mobileMenu.style.display = 'block';
+        mobileMenu.classList.add('active');
+        console.log('Menu opened');
+      } else {
+        mobileMenu.style.display = 'none';
+        mobileMenu.classList.remove('active');
+        console.log('Menu closed');
+      }
+      
+      // Toggle icon
+      var icon = this.querySelector('i');
+      if(icon) {
+        icon.className = mobileMenu.style.display === 'none' ? 
+          'fas fa-bars' : 'fas fa-times';
+      }
+    };
+    
+    console.log('Direct hamburger fix applied');
+  } else {
+    console.error('Menu elements not found');
+  }
+  
+  // Add click outside to close menu
+  document.addEventListener('click', function(e) {
+    if(mobileMenu && 
+       mobileMenu.style.display !== 'none' && 
+       !mobileMenu.contains(e.target) && 
+       !menuToggle.contains(e.target)) {
+      
+      mobileMenu.style.display = 'none';
+      mobileMenu.classList.remove('active');
+      
+      // Reset icon
+      var icon = menuToggle.querySelector('i');
+      if(icon) icon.className = 'fas fa-bars';
+    }
+  });
+});
+</script>
+    
     
 </body>
 </html>

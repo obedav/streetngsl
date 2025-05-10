@@ -1,13 +1,11 @@
-// navbar-color.js - Fixed mobile menu toggle functionality
+// navbar-color.js - Improved with better practices
 
 document.addEventListener('DOMContentLoaded', function() {
     // Identify the current page based on the active menu item
     const activePage = document.querySelector('.navbar-menu a.active');
     const navbar = document.querySelector('.navbar');
     const mobileMenu = document.querySelector('.mobile-menu');
-    const logoSpan = document.querySelector('.logo-text span');
-    const navLinks = document.querySelectorAll('.navbar-menu a');
-    const mobileLinks = document.querySelectorAll('.mobile-menu a');
+    const logoSpan = document.querySelector('.navbar-logo span');
     
     // Get page type from active menu or fallback to pathname
     let pageType = activePage ? activePage.textContent.trim() : '';
@@ -29,22 +27,22 @@ document.addEventListener('DOMContentLoaded', function() {
     let primaryColor, accentColor, gradientStart, gradientEnd, gradientStartScrolled, gradientEndScrolled;
     
     if (pageType.includes('Home')) {
-        // Home - Purple-Blue gradient (matching screenshot)
+        // Home - Off-white background with purple accents
         primaryColor = '#3f51b5';      // Indigo
-        accentColor = '#6573c3';       // Lighter indigo accent
-        gradientStart = 'rgba(3, 31, 193, 0.6)'; // Semi-transparent indigo
-        gradientEnd = 'rgba(255, 255, 255, 0.6)';  // Semi-transparent purple
-        gradientStartScrolled = 'rgba(3, 31, 193, 0.6)'; // More opaque when scrolled
-        gradientEndScrolled = 'rgba(255, 255, 255, 0.6)';  // More opaque when scrolled
+        accentColor = '#3f51b5';       // Indigo for accents
+        gradientStart = 'rgba(248, 248, 250, 0.95)'; // Off-white with slight transparency
+        gradientEnd = 'rgba(245, 245, 250, 0.95)';   // Slightly different off-white for subtle gradient
+        gradientStartScrolled = 'rgba(248, 248, 250, 0.98)'; // More opaque when scrolled
+        gradientEndScrolled = 'rgba(245, 245, 250, 0.98)';   // More opaque when scrolled
         document.body.classList.add('home-page');
     }
     else if (pageType.includes('Tavern')) {
         // Tavern - White and Orange gradient
         primaryColor = '#E65100';      // Deep orange (base)
         accentColor = '#FF9800';       // Orange accent
-        gradientStart = 'rgba(255, 255, 255, 0.2)'; // Semi-transparent white
+        gradientStart = 'rgba(0, 0, 0, 0.5)'; // Semi-transparent black
         gradientEnd = 'rgba(230, 81, 0, 0.6)';     // Semi-transparent orange
-        gradientStartScrolled = 'rgba(255, 255, 255, 0.3)'; // More opaque when scrolled
+        gradientStartScrolled = 'rgba(0, 0, 0, 0.7)'; // More opaque when scrolled
         gradientEndScrolled = 'rgba(230, 81, 0, 0.8)';     // More opaque when scrolled
         document.body.classList.add('tavern-page');
     } 
@@ -52,30 +50,30 @@ document.addEventListener('DOMContentLoaded', function() {
         // Trendy - Black and Red gradient
         primaryColor = '#8B0000';          // Dark red (base)
         accentColor = '#FF5252';           // Bright red accent
-        gradientStart = 'rgba(0, 0, 0, 0.6)'; // Semi-transparent black
-        gradientEnd = 'rgba(139, 0, 0, 0.6)';  // Semi-transparent dark red
+        gradientStart = 'rgba(139, 0, 0, 0.6)'; // Semi-transparent black
+        gradientEnd = 'rgba(0, 0, 0, 0.6)';  // Semi-transparent dark red
         gradientStartScrolled = 'rgba(0, 0, 0, 0.8)'; // More opaque when scrolled
         gradientEndScrolled = 'rgba(139, 0, 0, 0.8)';  // More opaque when scrolled
         document.body.classList.add('trendy-page');
     } 
     else if (pageType.includes('Realtors')) {
-        // Realtors - White and Gold gradient
+        // Realtors - Black and Gold gradient
         primaryColor = '#b5ad56';      // Gold/mustard (base)
         accentColor = '#d4cc6a';       // Lighter gold accent
-        gradientStart = 'rgba(255, 255, 255, 0.2)'; // Semi-transparent white
+        gradientStart = 'rgba(0, 0, 0, 0.5)'; // Semi-transparent black
         gradientEnd = 'rgba(181, 173, 86, 0.6)';   // Semi-transparent gold
-        gradientStartScrolled = 'rgba(255, 255, 255, 0.3)'; // More opaque when scrolled
+        gradientStartScrolled = 'rgba(0, 0, 0, 0.7)'; // More opaque when scrolled
         gradientEndScrolled = 'rgba(181, 173, 86, 0.8)';   // More opaque when scrolled
         document.body.classList.add('realtors-page');
     }
     else {
         // Default fallback - Blue gradient
         primaryColor = '#3f51b5';      // Indigo
-        accentColor = '#6573c3';       // Lighter indigo accent
-        gradientStart = 'rgba(63, 81, 181, 0.6)'; // Semi-transparent indigo
+        accentColor = '#ffffff';       // White for better visibility
+        gradientStart = 'rgba(3, 31, 193, 0.6)'; // Semi-transparent indigo
         gradientEnd = 'rgba(103, 58, 183, 0.6)';  // Semi-transparent purple
-        gradientStartScrolled = 'rgba(63, 81, 181, 0.85)'; // More opaque when scrolled
-        gradientEndScrolled = 'rgba(103, 58, 183, 0.85)';  // More opaque when scrolled
+        gradientStartScrolled = 'rgba(3, 31, 193, 0.8)'; // More opaque when scrolled
+        gradientEndScrolled = 'rgba(103, 58, 183, 0.8)';  // More opaque when scrolled
         document.body.classList.add('home-page');
     }
     
@@ -90,56 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Style mobile menu
     if (mobileMenu) {
         mobileMenu.style.background = `linear-gradient(to right, ${gradientStartScrolled}, ${gradientEndScrolled})`;
-    }
-    
-    // Apply colors to active link and create hover effects
-    if (navLinks) {
-        navLinks.forEach(link => {
-            if (link.classList.contains('active')) {
-                link.style.color = accentColor;
-                // Create a custom underline for active link
-                const underline = document.createElement('div');
-                underline.className = 'active-underline';
-                underline.style.position = 'absolute';
-                underline.style.bottom = '-5px';
-                underline.style.left = '0';
-                underline.style.width = '100%';
-                underline.style.height = '2px';
-                underline.style.backgroundColor = accentColor;
-                link.style.position = 'relative';
-                link.appendChild(underline);
-            }
-            
-            // Add hover effects
-            link.addEventListener('mouseenter', () => {
-                link.style.color = accentColor;
-            });
-            
-            link.addEventListener('mouseleave', () => {
-                if (!link.classList.contains('active')) {
-                    link.style.color = 'rgba(255, 255, 255, 0.9)';
-                }
-            });
-        });
-    }
-    
-    // Apply colors to mobile menu links
-    if (mobileLinks) {
-        mobileLinks.forEach(link => {
-            if (link.classList.contains('active')) {
-                link.style.color = accentColor;
-            }
-            
-            link.addEventListener('mouseenter', () => {
-                link.style.color = accentColor;
-            });
-            
-            link.addEventListener('mouseleave', () => {
-                if (!link.classList.contains('active')) {
-                    link.style.color = 'rgba(255, 255, 255, 0.9)';
-                }
-            });
-        });
     }
     
     // Handle scrolling effect
@@ -157,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // FIX: Properly handle mobile menu toggle
+    // Handle mobile menu toggle
     const menuToggle = document.querySelector('.navbar-toggle');
     if (menuToggle && mobileMenu) {
         // Remove any existing event listeners first

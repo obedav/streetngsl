@@ -22,6 +22,73 @@
     margin: 0 auto;
 }
 
+/* Contact page navbar styling with off-white color */
+.contact-page .navbar {
+    background: #f5f5f5 !important; /* Off-white background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-page .navbar-menu a {
+    color: #333333; /* Dark text for contrast */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.contact-page .navbar-menu a:hover {
+    color: var(--primary);
+    background: rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.contact-page .navbar-menu a.active {
+    color: var(--primary);
+    background: rgba(0, 0, 0, 0.08);
+    font-weight: 700;
+}
+
+.contact-page .navbar-menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+/* Logo text color adjustment for off-white background */
+.contact-page .logo-text {
+    color: #333333;
+}
+
+.contact-page .logo-text span {
+    color: var(--primary);
+}
+
+/* Mobile menu styling for contact page */
+.contact-page .mobile-menu {
+    background: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+}
+
+.contact-page .mobile-menu a {
+    color: #333333;
+}
+
+.contact-page .mobile-menu a:hover,
+.contact-page .mobile-menu a.active {
+    color: var(--primary);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Hamburger icon color adjustment */
+.contact-page .navbar-toggle {
+    color: #333333;
+}
+
 /* Contact Cards */
 .contact-grid {
     display: grid;
@@ -56,15 +123,38 @@
     border-top: 4px solid var(--accent);
 }
 
+/* Round circle styling for contact icons with images */
 .contact-icon {
     width: 80px;
     height: 80px;
-    margin: 0 auto 1.5rem;
     border-radius: 50%;
+    margin: 0 auto 20px;
+    overflow: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure images fill the circle properly */
+.contact-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes the image cover the entire circle */
+}
+
+/* Specific styles for each card type */
+.tavern-card .contact-icon {
+    border: 3px solid #E65100; /* Orange for tavern */
+}
+
+.trendy-card .contact-icon {
+    border: 3px solid #8B0000; /* Red for trendy */
+}
+
+.realtors-card .contact-icon {
+    border: 3px solid #b5ad56; /* Gold for realtors */
 }
 
 .tavern-card .contact-icon {
@@ -95,7 +185,7 @@
 }
 
 .realtors-card h2 {
-    color: var(--accent);
+    color: #b5ad56;
 }
 
 .contact-details {
@@ -123,7 +213,7 @@
 }
 
 .realtors-card .contact-item i {
-    color: var(--accent);
+    color: #b5ad56;
 }
 
 /* Map Section */
@@ -283,6 +373,31 @@
     font-weight: normal;
 }
 
+/* Form Message Styles */
+.form-message {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.25rem;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.error-message ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+}
+
 /* Form Validation Styles */
 .invalid {
     border-color: #dc3545 !important;
@@ -307,6 +422,18 @@
 
 .success-message h3 {
     margin-bottom: 1rem;
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border-color: #dc3545;
+}
+
+.form-group input:focus.error,
+.form-group select:focus.error,
+.form-group textarea:focus.error {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 /* Responsive Styles */
@@ -378,3 +505,5 @@
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary);
 }
+
+

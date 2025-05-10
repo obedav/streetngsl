@@ -826,3 +826,133 @@
                 margin: 0 0 20px 0;
             }
         }
+
+
+        /* Form Submission Styling */
+.form-message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.success-message {
+    background-color: #e6f4ea;
+    color: #34a853;
+    border-left: 4px solid #34a853;
+}
+
+.error-message {
+    background-color: #fce8e6;
+    color: #ea4335;
+    border-left: 4px solid #ea4335;
+}
+
+.error-message p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.error-message ul {
+    padding-left: 20px;
+}
+
+.error-message li {
+    margin-bottom: 5px;
+}
+
+/* Form Input Error State */
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border: 1px solid #ea4335;
+    background-color: rgba(234, 67, 53, 0.05);
+}
+
+/* Animation for messages */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#form-success, 
+#form-errors {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Make the messages stand out more on mobile */
+@media (max-width: 768px) {
+    .form-message {
+        padding: 15px 12px;
+        font-size: 0.95rem;
+    }
+}
+
+
+
+/* Form Submission Styling */
+.form-message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.success-message {
+    background-color: #e6f4ea;
+    color: #34a853;
+    border-left: 4px solid #34a853;
+}
+
+.error-message {
+    background-color: #fce8e6;
+    color: #ea4335;
+    border-left: 4px solid #ea4335;
+}
+
+.error-message p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.error-message ul {
+    padding-left: 20px;
+}
+
+.error-message li {
+    margin-bottom: 5px;
+}
+
+/* Form Input Error State */
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border: 1px solid #ea4335;
+    background-color: rgba(234, 67, 53, 0.05);
+}
+
+/* Animation for messages */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#form-success, 
+#form-errors {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Make the messages stand out more on mobile */
+@media (max-width: 768px) {
+    .form-message {
+        padding: 15px 12px;
+        font-size: 0.95rem;
+    }
+}
+
+
+.navbar-logo img {
+    height: 150px; /* Reduced from 40px */
+    width: auto;
+    vertical-align: middle;
+}

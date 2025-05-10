@@ -10,16 +10,36 @@
     <link rel="stylesheet" href="/public/css/navbar.css">
     <link rel="stylesheet" href="/public/css/footer.css">
     <link rel="stylesheet" href="/public/css/contact.css">
+    <link rel="stylesheet" href="/public/css/home-navbar.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add contact-page class to body
+            document.body.classList.add('contact-page');
+            
+            // Ensure the contact link is active
+            const navLinks = document.querySelectorAll('.navbar-menu a, .mobile-menu a');
+            navLinks.forEach(link => {
+                // Remove active class from all links
+                link.classList.remove('active');
+                
+                // Add active class to contact links
+                if (link.getAttribute('href') === 'contact.html') {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container navbar-container">
             <a href="index.html" class="navbar-logo">
-                <img src="public/images/logo.png" alt="StreetNG Logo" height="40">
-                <span class="logo-text">Street<span>NG</span></span>
+                <img src="public/images/logo1.png" alt="StreetNG Logo" height="40">
+              <!--  <span class="logo-text">Street<span>NG</span></span>  -->
             </a>
             
             <div class="navbar-menu">
@@ -59,8 +79,8 @@
             <div class="contact-grid">
                 <!-- Street Tavern Contact -->
                 <div class="contact-card tavern-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-utensils"></i>
+                     <div class="contact-icon">
+                       <img src="public/images/tavern-logo.jpg" alt="Street Tavern">
                     </div>
                     <h2>Street Tavern</h2>
                     <div class="contact-details">
@@ -70,11 +90,11 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <p>07069201110</p>
+                            <p>+2347069201110</p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <p>streetngsl@gmail.com</p>
+                            <p>tavern@streetngsl.com</p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-clock"></i>
@@ -85,8 +105,8 @@
                 
                 <!-- Street Trendy Contact -->
                 <div class="contact-card trendy-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-tshirt"></i>
+                     <div class="contact-icon">
+                       <img src="public/images/trendy-logo.jpg" alt="Street Tavern">
                     </div>
                     <h2>Street Trendy</h2>
                     <div class="contact-details">
@@ -96,11 +116,11 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <p>07086067631</p>
+                            <p>+2347086067631</p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <p>streetngsl@gmail.com</p>
+                            <p>trendy@streetngsl.com</p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-clock"></i>
@@ -110,25 +130,27 @@
                         </div>
                     </div>
                 </div>
+                <!-- Street Trendy Contact section ends -->
                 
                 <!-- Street Realtors Contact -->
+               
                 <div class="contact-card realtors-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-home"></i>
+                     <div class="contact-icon">
+                       <img src="public/images/realtors-logo.jpg" alt="Street Realtors">
                     </div>
                     <h2>Street Realtors</h2>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <p>Victoria Island, Lagos, Nigeria</p>
+                            <p>4 Bathlomew Ezeogu Street, Oke Afa Isolo, Lagos</p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <p>09047382343</p>
+                            <p>+2349047382343</p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <p>streetngsl@gmail.com</p>
+                            <p>realtors@streetngsl.com</p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-clock"></i>
@@ -137,6 +159,7 @@
                             <p>Sunday: Closed</p>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -170,75 +193,88 @@
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section class="section form-section">
-        <div class="container">
-            <div class="form-wrapper">
-                <div class="form-content">
-                    <h2 class="section-title">Send Us a Message</h2>
-                    <p>
-                        Have questions, feedback, or specific requests? Fill out the form below, and our team will get back to you as soon as possible. We value your input and look forward to assisting you.
-                    </p>
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>streetngsl@gmail.com</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <span>Customer Support: +234 700 STREETNG</span>
-                        </div>
+  
+<!-- Contact Form Section -->
+<section class="section form-section">
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="form-content">
+                <h2 class="section-title">Send Us a Message</h2>
+                <p>
+                    Have questions, feedback, or specific requests? Fill out the form below, and our team will get back to you as soon as possible. We value your input and look forward to assisting you.
+                </p>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@streetngsl.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>Customer Support: +234 700 STREETNG</span>
                     </div>
                 </div>
-                
-                <div class="contact-form">
-                    <form action="#" method="post">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required data-error-message="Please enter your name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required data-error-message="Please enter a valid email address">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required data-error-message="Please enter your phone number">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required data-error-message="Please enter a subject">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="department">Department</label>
-                            <select id="department" name="department" required data-error-message="Please select a department">
-                                <option value="">Select a department</option>
-                                <option value="tavern">Street Tavern</option>
-                                <option value="trendy">Street Trendy</option>
-                                <option value="realtors">Street Realtors</option>
-                                <option value="general">General Inquiry</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required data-error-message="Please enter your message"></textarea>
-                        </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="newsletter" name="newsletter">
-                            <label for="newsletter">Subscribe to our newsletter for updates and special offers</label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+            </div>
+            
+            <div class="contact-form">
+                <!-- Display success message if form was submitted successfully -->
+                <div id="form-success" class="form-message success-message" style="display: none;">
+                    Thank you for your message! We will get back to you soon.
                 </div>
+                
+                <!-- Display error messages if there were any -->
+                <div id="form-errors" class="form-message error-message" style="display: none;">
+                    <p>Please correct the following errors:</p>
+                    <ul id="error-list"></ul>
+                </div>
+                
+                <form action="process_contact.php" method="post" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required data-error-message="Please enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required data-error-message="Please enter a valid email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required data-error-message="Please enter your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required data-error-message="Please enter a subject">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <select id="department" name="department" required data-error-message="Please select a department">
+                            <option value="">Select a department</option>
+                            <option value="tavern">Street Tavern</option>
+                            <option value="trendy">Street Trendy</option>
+                            <option value="realtors">Street Realtors</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required data-error-message="Please enter your message"></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter for updates and special offers</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </div>
+    </div>
+</section>
     </section>
 
     <!-- Footer -->
@@ -299,9 +335,9 @@
                         <i class="fas fa-phone"></i>
                     </div>
                     <div>
-                        <p>Tavern: 07069201110</p>
-                        <p>Trendy: 07086067631</p>
-                        <p>Realtors: 09047382343</p>
+                        <p>Tavern: +2347069201110</p>
+                        <p>Trendy: +2347086067631</p>
+                        <p>Realtors: +2349047382343</p>
                     </div>
                 </div>
                 <div class="footer-contact-item">
@@ -309,7 +345,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div>
-                        <p>streetngsl@gmail.com</p>
+                        <p>info@streetngsl.com</p>
                     </div>
                 </div>
             </div>
@@ -321,8 +357,10 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+
+<!-- JavaScript -->
+<script src="public/js/main.js"></script>
+<script src="public/js/hamburger-fix.js"></script>
     <script src="public/js/hamburger-fix.js"></script>
     <script>
         // Map Tabs Functionality
@@ -361,6 +399,82 @@
                 };
             }
         });
+
+        
+
+
+        // Form Validation and Submission\
+            document.addEventListener('DOMContentLoaded', function() {
+        // Check URL parameters for form submission status
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+        
+        if (status === 'success') {
+            // Show success message
+            document.getElementById('form-success').style.display = 'block';
+            
+            // Scroll to the message
+            document.getElementById('form-success').scrollIntoView({ behavior: 'smooth' });
+        } else if (status === 'error') {
+            // We would need to retrieve errors from session in a real PHP environment
+            // For now, we'll just show a generic error
+            document.getElementById('form-errors').style.display = 'block';
+            const errorList = document.getElementById('error-list');
+            errorList.innerHTML = '<li>There was a problem with your submission. Please check all fields and try again.</li>';
+            
+            // Scroll to the errors
+            document.getElementById('form-errors').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Client-side form validation
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                let isValid = true;
+                const errorMessages = [];
+                
+                // Get all required inputs
+                const requiredInputs = contactForm.querySelectorAll('[required]');
+                
+                requiredInputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        isValid = false;
+                        const errorMessage = input.getAttribute('data-error-message') || 'This field is required';
+                        errorMessages.push(errorMessage);
+                        input.classList.add('error');
+                    } else {
+                        input.classList.remove('error');
+                        
+                        // Additional validation for email
+                        if (input.type === 'email') {
+                            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (!emailPattern.test(input.value)) {
+                                isValid = false;
+                                errorMessages.push('Please enter a valid email address');
+                                input.classList.add('error');
+                            }
+                        }
+                    }
+                });
+                
+                if (!isValid) {
+                    event.preventDefault();
+                    
+                    // Display error messages
+                    const errorList = document.getElementById('error-list');
+                    errorList.innerHTML = '';
+                    errorMessages.forEach(message => {
+                        const li = document.createElement('li');
+                        li.textContent = message;
+                        errorList.appendChild(li);
+                    });
+                    
+                    document.getElementById('form-errors').style.display = 'block';
+                    document.getElementById('form-errors').scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+    });
     </script>
 </body>
 </html>

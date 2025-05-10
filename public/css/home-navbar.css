@@ -1,0 +1,78 @@
+/* Home page navbar styling with off-white background */
+.home-page .navbar {
+    background: linear-gradient(to right, rgba(248, 248, 250, 0.95), rgba(245, 245, 250, 0.95)) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu items for home page - dark text on off-white background */
+.home-page .navbar-menu a {
+    color: #333333;
+    text-shadow: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 0; /* Remove border radius */
+    transition: all 0.3s ease;
+    background: transparent;
+    position: relative;
+}
+
+/* Change text color to blue on hover, but no background effects */
+.home-page .navbar-menu a:hover {
+    color: #3f51b5; /* Change to blue on hover */
+    background: transparent;
+    transform: none; /* Remove transform effect */
+    box-shadow: none; /* Remove box shadow */
+}
+
+/* Active menu item for home page - simple underline */
+.home-page .navbar-menu a.active {
+    color: #3f51b5;
+    font-weight: 700;
+    background: transparent;
+    box-shadow: none;
+    border-bottom: 2px solid #3f51b5; /* Add underline for active item */
+}
+
+/* Remove the ::after underline effect */
+.home-page .navbar-menu a::after {
+    display: none;
+}
+
+/* Mobile menu styling for home page */
+.home-page .mobile-menu {
+    background: rgba(248, 248, 250, 0.98) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.home-page .mobile-menu a {
+    color: #333333;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.home-page .mobile-menu a:hover {
+    color: #3f51b5; /* Change to blue on hover */
+    background: transparent;
+}
+
+.home-page .mobile-menu a.active {
+    color: #3f51b5;
+    font-weight: 700;
+    background: transparent;
+    border-left: 3px solid #3f51b5; /* Add left border for active item in mobile menu */
+}
+
+/* Logo color for home page */
+.home-page .navbar-logo span {
+    color: #3f51b5 !important;
+}
+
+/* Toggle button for home page */
+.home-page .navbar-toggle {
+    color: #3f51b5;
+}
+
+.navbar-logo img {
+    height: 80px; /* Reduced from 40px */
+    width: auto;
+    vertical-align: middle;
+}

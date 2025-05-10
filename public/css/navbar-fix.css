@@ -1,0 +1,50 @@
+/* Emergency navbar fixes - specifically targeting index page */
+.navbar-menu a,
+.mobile-menu a {
+    background: transparent !important;
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+/* Remove any box shadows or borders that might be causing the gray background */
+.navbar-menu a,
+.mobile-menu a {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Style for active menu item */
+.navbar-menu a.active,
+.mobile-menu a.active {
+    color: #ffffff;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.15) !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Hover effects */
+.navbar-menu a:hover,
+.mobile-menu a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Underline effect for active and hover */
+.navbar-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover::after,
+.navbar-menu a.active::after {
+    width: 100%;
+}

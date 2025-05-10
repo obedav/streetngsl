@@ -1,0 +1,42 @@
+/* Navbar spacing fixes */
+.navbar-menu {
+    gap: 1rem !important; /* Reduce gap between menu items */
+}
+
+.navbar-menu a {
+    padding: 5px 5px !important; /* Reduce padding */
+    margin: 0 2px !important;    /* Add minimal margin */
+    background: transparent !important;
+}
+
+/* Keep active state styling */
+.navbar-menu a.active {
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Ensure mobile menu has proper spacing too */
+.mobile-menu a {
+    padding: 0.5rem 1rem !important;
+}
+
+/* Logo styling for consistency across pages */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar-logo img {
+    margin-right: 8px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.logo-text span {
+    color: #f39c12; /* Orange color for the "NG" part */
+}

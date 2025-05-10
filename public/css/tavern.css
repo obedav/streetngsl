@@ -342,3 +342,9 @@
 .menu-button-container {
     padding-top: 2rem;
 }
+
+.navbar-logo img {
+    height: 150px; /* Reduced from 40px */
+    width: auto;
+    vertical-align: middle;
+}

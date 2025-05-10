@@ -1,109 +1,146 @@
-/* Hero Section with Custom Transitions */
+/* 
+ * Optimized Hero Section CSS
+ * Fixed for immediate visibility on page load with smooth transitions
+ */
 
+/* Hero Section with optimized transitions */
 .hero {
-    position: relative;
-    height: 85vh;
-    overflow: hidden;
-    color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    background-color: #1c1c1c; /* Fallback color if something goes wrong */
+  position: relative;
+  color: #fff;
+  padding: 8rem 0;
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Prevent slide content from overflowing */
 }
 
-/* Slides container */
 .hero-slides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-/* Individual slide styling */
 .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1.5s ease, transform 1.5s ease;
-    transform: translateX(100%); /* Default: slides come from right side */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  
+  /* IMPORTANT: Optimize the transition for performance */
+  transition: 
+    opacity 1000ms cubic-bezier(0.4, 0.0, 0.2, 1), 
+    transform 1000ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  
+  /* Hide non-active slides */
+  visibility: hidden;
+  
+  /* Prepare images for hardware acceleration */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
-/* Active slide */
+/* First slide should be immediately visible */
+.slide:first-child {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
 .slide.active {
-    opacity: 1;
-    transform: translateX(0);
-    z-index: 1;
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
 }
 
-/* Add a linear gradient overlay to all slides */
-.slide::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    z-index: 0;
+/* Add a subtle overlay to ensure text readability - but make it more transparent initially */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); /* More transparent than before */
+  z-index: 1;
 }
 
-/* Third slide specifically comes from bottom */
-.slide:nth-child(3) {
-    transform: translateY(100%);
-}
-.slide:nth-child(3).active {
-    transform: translateY(0);
-}
-
-/* Content styling */
 .hero .container {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    padding: 0 2rem;
+  position: relative;
+  z-index: 2; /* Ensure content is above the slides */
+  max-width: 900px;
+  
+  /* Immediate visibility for content */
+  opacity: 1;
 }
 
 .hero h1 {
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  
+  /* Remove animation delay for immediate visibility */
+  animation: fadeIn 0.8s ease-out;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    max-width: 800px;
-    margin: 1.5rem auto;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  
+  /* Reduce animation delay for faster appearance */
+  animation: fadeIn 0.8s ease-out 0.1s both;
 }
 
-/* Button styling enhancement */
+/* Add animation for the button - faster animation */
 .hero .btn {
-    position: relative;
-    z-index: 10;
-    padding: 0.75rem 1.5rem;
-    transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-out 0.2s both;
 }
 
-.hero .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+/* Simple fade in animation without the upward movement */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Responsive adjustments */
+/* Mobile optimization */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
+  .hero {
+    padding: 6rem 0;
+    min-height: 60vh;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Reduce quality on smaller screens for better performance */
+@media (max-width: 576px) {
+  .slide {
+    background-attachment: scroll;
+    /* Use faster transitions on mobile */
+    transition: 
+      opacity 800ms cubic-bezier(0.4, 0.0, 0.2, 1), 
+      transform 800ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
 }
