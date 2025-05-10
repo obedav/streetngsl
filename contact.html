@@ -6,10 +6,10 @@
     <meta name="description" content="Contact StreetNG - Get in touch with our restaurant, tailoring, and real estate teams">
     <title>Contact StreetNG - Get in Touch</title>
     <!-- CSS Files -->
-    <link rel="stylesheet" href="/streetngsl/public/css/style.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/navbar.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/footer.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/contact.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <link rel="stylesheet" href="/public/css/contact.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -17,28 +17,31 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container navbar-container">
-            <a href="index.html" class="navbar-logo">Street<span>NG</span></a>
+            <a href="index.html" class="navbar-logo">
+                <img src="public/images/logo.png" alt="StreetNG Logo" height="40">
+                <span class="logo-text">Street<span>NG</span></span>
+            </a>
             
             <div class="navbar-menu">
-                <a href="index.html">Home</a>
+                <a href="index.html" class="active">Home</a>
                 <a href="tavern.html">Street Tavern</a>
                 <a href="trendy.html">Street Trendy</a>
                 <a href="realtors.html">Street Realtors</a>
-                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html">Contact</a>
             </div>
             
-            <button class="navbar-toggle">
+            <button class="navbar-toggle" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         
         <!-- Mobile Menu -->
         <div class="mobile-menu">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="tavern.html">Street Tavern</a>
             <a href="trendy.html">Street Trendy</a>
             <a href="realtors.html">Street Realtors</a>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
 
@@ -320,6 +323,7 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="public/js/hamburger-fix.js"></script>
     <script>
         // Map Tabs Functionality
         document.addEventListener('DOMContentLoaded', function() {
@@ -340,6 +344,22 @@
                     document.getElementById(`${tabId}-map`).classList.add('active');
                 });
             });
+        });
+
+
+        // Inline emergency fix for hamburger menu
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuToggle = document.querySelector('.navbar-toggle');
+            var mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.onclick = function(e) {
+                    e.preventDefault();
+                    mobileMenu.classList.toggle('active');
+                    console.log('Hamburger clicked, menu is now:', 
+                              mobileMenu.classList.contains('active') ? 'active' : 'inactive');
+                };
+            }
         });
     </script>
 </body>

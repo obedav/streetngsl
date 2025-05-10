@@ -6,10 +6,13 @@
     <meta name="description" content="Street Realtors - Expert guidance for all your property needs including brokerage, management, and advisory services">
     <title>Street Realtors - Expert Real Estate Solutions</title>
     <!-- CSS Files -->
-    <link rel="stylesheet" href="/streetngsl/public/css/style.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/navbar.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/footer.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/realtors.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <link rel="stylesheet" href="/public/css/realtors.css">
+
+
+    <link rel="stylesheet" href="public/css/hero-section.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -17,8 +20,11 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container navbar-container">
-            <a href="index.html" class="navbar-logo">Street<span>NG</span></a>
-            
+            <a href="index.html" class="navbar-logo">
+                <img src="public/images/realtors-logo.jpg" alt="StreetNG Logo" height="40">
+                <span class="logo-text">Street<span>NG</span></span>
+            </a>
+        
             <div class="navbar-menu">
                 <a href="index.html">Home</a>
                 <a href="tavern.html">Street Tavern</a>
@@ -26,149 +32,194 @@
                 <a href="realtors.html" class="active">Street Realtors</a>
                 <a href="contact.html">Contact</a>
             </div>
-            
-            <button class="navbar-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu">
-            <a href="index.html">Home</a>
-            <a href="tavern.html">Street Tavern</a>
-            <a href="trendy.html">Street Trendy</a>
-            <a href="realtors.html" class="active">Street Realtors</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+                        </div>
+                    
+                        <button class="navbar-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                </div>
+                
+                <!-- Mobile Menu -->
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <a href="index.html">Home</a>
+                <a href="tavern.html">Street Tavern</a>
+                <a href="trendy.html">Street Trendy</a>
+                <a href="realtors.html" class="active">Street Realtors</a>
+                <a href="contact.html">Contact</a>
+            </div>
+    </div>
+</nav>
 
     <!-- Hero Section -->
-    <header class="realtors-hero">
-        <div class="container">
-            <h1>Expert Guidance for All Your Property Needs</h1>
-            <p class="hero-text">
-                Welcome to Street Realtors, your trusted partner for all things real estate. Need expert management for your investments or require strategic advice to make informed decisions? Our dedicated team is here to guide you every step of the way.
-            </p>
-            <a href="#services" class="btn btn-accent">Explore Our Services</a>
-        </div>
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-slides">
+        <!-- Using real estate themed images that would work well for a realtor site -->
+        <div class="slide" style="background-image: url('public/images/luxury-home.jpg');"></div>
+        <div class="slide" style="background-image: url('public/images/modern-apartment.jpg');"></div>
+        <div class="slide" style="background-image: url('public/images/real-estate-agent.jpg');"></div>
+    </div>
+
+    <div class="container">
+        <h1>Expert Guidance for All Your Property Needs</h1>
+        <h2 class="hero-subtitle">Welcome to Street Realtors</h2>
+        <p class="hero-text">
+            Your trusted partner for all things real estate. Need expert management for your investments or require strategic advice to make informed decisions? Our dedicated team is here to guide you every step of the way.
+        </p>
+        <a href="#services" class="btn btn-accent">Explore Our Services</a>
+    </div>
+</header>
     </header>
 
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title text-center">Our Services</h2>
-            
-            <div class="services-grid">
-                <!-- Property Brokerage -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Property Brokerage</h3>
-                        <h4>Find Your Perfect Property or Secure the Ideal Buyer/Tenant</h4>
-                        <p>
-                            Our experienced agents offer personalized support, market knowledge, and access to listings for finding your dream home or commercial space. They guide them through viewings, negotiations, and closings and leverage our extensive network and marketing strategies to attract qualified buyers and tenants.
-                        </p>
-                        <a href="#contact" class="btn btn-accent">Learn More</a>
-                    </div>
-                </div>
-                
-                <!-- Property Management -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Property Management</h3>
-                        <h4>Maximize Your Investment, Minimize Your Hassle</h4>
-                        <p>
-                            Our comprehensive property management services handle everything from tenant screening and rent collection to maintenance coordination and financial reporting, allowing you to enjoy the benefits of your investment without the day-to-day responsibilities.
-                        </p>
-                        <a href="#contact" class="btn btn-accent">Learn More</a>
-                    </div>
-                </div>
-                
-                <!-- Advisory Services -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Advisory Services</h3>
-                        <h4>Strategic Insights for Informed Property Decisions</h4>
-                        <p>
-                            Our advisory services offer strategic insights and market analysis for complex real estate decisions, ensuring sound investments and long-term property goals through tailored solutions based on industry best practices.
-                        </p>
-                        <a href="#contact" class="btn btn-accent">Learn More</a>
-                    </div>
-                </div>
-            </div>
+<!-- Services Section -->
+<section id="services" class="section services-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Our Core Services</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Comprehensive real estate solutions tailored to your needs</p>
         </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="section why-choose-section">
-        <div class="container">
-            <div class="why-choose-content">
-                <div class="why-choose-text">
-                    <h2 class="section-title">Why Choose Street Realtors?</h2>
-                    <p>
-                        At Street Realtors, we understand that real estate decisions are some of the most significant financial and personal choices you'll make. That's why we're committed to providing exceptional service with integrity, expertise, and personalized attention.
+        
+        <div class="services-grid">
+            <!-- Property Brokerage -->
+            <div class="service-card">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Property Brokerage</h3>
+                </div>
+                <div class="service-image">
+                    <img src="public/images/brokerage.jpg" alt="Property Brokerage" class="service-img">
+                </div>
+                <div class="service-content">
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Personalized property matching</li>
+                        <li><i class="fas fa-check"></i> Exclusive market access</li>
+                        <li><i class="fas fa-check"></i> Negotiation expertise</li>
+                        <li><i class="fas fa-check"></i> Transaction management</li>
+                    </ul>
+                    <p class="service-description">
+                        Whether buying, selling, or leasing, our experienced agents provide end-to-end support throughout your real estate journey.
                     </p>
-                    
-                    <div class="features">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div>
-                                <h3>Trust & Integrity</h3>
-                                <p>We prioritize honest, transparent communication and always act in your best interest.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <div>
-                                <h3>Expert Knowledge</h3>
-                                <p>Our team has in-depth understanding of the Nigerian real estate market and property trends.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-user-friends"></i>
-                            </div>
-                            <div>
-                                <h3>Personalized Service</h3>
-                                <p>We take time to understand your unique needs and tailor our services accordingly.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-network-wired"></i>
-                            </div>
-                            <div>
-                                <h3>Extensive Network</h3>
-                                <p>Our connections provide access to exclusive properties and qualified buyers/tenants.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#contact" class="btn btn-accent">Consult With Us</a>
                 </div>
-                
-                <div class="why-choose-image">
-                    <img src="images/realtors-team.jpg" alt="Street Realtors Team">
+            </div>
+            
+            <!-- Property Management -->
+            <div class="service-card">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Property Management</h3>
+                </div>
+                <div class="service-image">
+                    <img src="public/images/management.jpg" alt="Property Management" class="service-img">
+                </div>
+                <div class="service-content">
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Tenant screening & placement</li>
+                        <li><i class="fas fa-check"></i> Rent collection & disbursement</li>
+                        <li><i class="fas fa-check"></i> Maintenance coordination</li>
+                        <li><i class="fas fa-check"></i> Financial reporting</li>
+                    </ul>
+                    <p class="service-description">
+                        Our hands-on management services maximize your investment returns while minimizing your involvement in day-to-day operations.
+                    </p>
+                    <a href="#contact" class="btn btn-accent">Get Started</a>
+                </div>
+            </div>
+            
+            <!-- Advisory Services -->
+            <div class="service-card">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Advisory Services</h3>
+                </div>
+                <div class="service-image">
+                    <img src="public/images/advisory.jpg" alt="Real Estate Advisory" class="service-img">
+                </div>
+                <div class="service-content">
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Market analysis & forecasting</li>
+                        <li><i class="fas fa-check"></i> Investment strategy</li>
+                        <li><i class="fas fa-check"></i> Portfolio optimization</li>
+                        <li><i class="fas fa-check"></i> Development consulting</li>
+                    </ul>
+                    <p class="service-description">
+                        Make informed real estate decisions with our data-driven insights and strategic recommendations tailored to your objectives.
+                    </p>
+                    <a href="#contact" class="btn btn-accent">Schedule Consultation</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Process Section (replacing Why Choose Us) -->
+<section class="section process-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Our Approach</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">A streamlined process focused on your success</p>
+        </div>
+        
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3>Initial Consultation</h3>
+                    <p>We begin with a thorough understanding of your real estate goals, preferences, and requirements, establishing the foundation for a tailored approach.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3>Strategic Planning</h3>
+                    <p>Our team develops a customized strategy based on market insights, financial analysis, and your specific objectives to optimize your real estate experience.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3>Expert Execution</h3>
+                    <p>We leverage our expertise, extensive network, and industry relationships to implement your plan efficiently, whether buying, selling, or managing property.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <h3>Ongoing Support</h3>
+                    <p>Our commitment extends beyond the transaction. We provide continued guidance and assistance to ensure long-term satisfaction with your real estate decisions.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="commitment-box">
+            <div class="commitment-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="commitment-content">
+                <h3>Our Commitment to Excellence</h3>
+                <p>At Street Realtors, we understand that real estate decisions are some of the most significant financial and personal choices you'll make. We pride ourselves on delivering exceptional service with integrity, expertise, and personalized attention to every client we serve.</p>
+                <a href="#contact" class="btn btn-primary-outline mt-4">Connect With Our Team</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
     <!-- Properties Showcase -->
-    <section class="section properties-section">
+  <!--  <section class="section properties-section">
         <div class="container">
             <h2 class="section-title text-center">Featured Properties</h2>
             <p class="properties-intro">
@@ -176,7 +227,7 @@
             </p>
             
             <div class="properties-grid">
-                <!-- Property 1 -->
+               
                 <div class="property-card">
                     <div class="property-image">
                         <img src="images/property-1.jpg" alt="Luxury Apartment">
@@ -195,7 +246,7 @@
                     </div>
                 </div>
                 
-                <!-- Property 2 -->
+                
                 <div class="property-card">
                     <div class="property-image">
                         <img src="images/property-2.jpg" alt="Commercial Space">
@@ -214,7 +265,7 @@
                     </div>
                 </div>
                 
-                <!-- Property 3 -->
+                
                 <div class="property-card">
                     <div class="property-image">
                         <img src="images/property-3.jpg" alt="Family Home">
@@ -238,7 +289,100 @@
                 <a href="#" class="btn btn-accent-outline">View All Properties</a>
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+    <!-- Property Specialization -->
+<section class="section specialization-section">
+    <div class="container">
+        <h2 class="section-title text-center">Our Property Expertise</h2>
+        <p class="section-intro text-center">
+            At Street Realtors, we specialize in a diverse range of premium properties across Nigeria's most sought-after locations.
+        </p>
+        
+        <div class="expertise-grid">
+            <!-- Residential Properties -->
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="expertise-content">
+                    <h3>Residential Properties</h3>
+                    <p>
+                        From luxury apartments and family homes to exclusive penthouses, we connect buyers and sellers in Nigeria's most prestigious residential areas. Our portfolio includes properties in:
+                    </p>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check-circle"></i> Lekki & Victoria Island</li>
+                        <li><i class="fas fa-check-circle"></i> Ikoyi & Banana Island</li>
+                        <li><i class="fas fa-check-circle"></i> Ikeja GRA & Maryland</li>
+                        <li><i class="fas fa-check-circle"></i> Bodija & Akobo (Ibadan)</li>
+                    </ul>
+                    <div class="expertise-cta">
+                        <a href="#contact" class="btn btn-accent">Inquire About Listings</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Commercial Properties -->
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="expertise-content">
+                    <h3>Commercial Properties</h3>
+                    <p>
+                        We offer a range of commercial real estate solutions for businesses of all sizes, from retail spaces to corporate headquarters. Our commercial expertise includes:
+                    </p>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check-circle"></i> Office Spaces & Corporate Buildings</li>
+                        <li><i class="fas fa-check-circle"></i> Retail & Shopping Complexes</li>
+                        <li><i class="fas fa-check-circle"></i> Hospitality & Leisure Properties</li>
+                        <li><i class="fas fa-check-circle"></i> Industrial Warehouses & Facilities</li>
+                    </ul>
+                    <div class="expertise-cta">
+                        <a href="#contact" class="btn btn-accent">Discuss Your Needs</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Investment Properties -->
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="expertise-content">
+                    <h3>Investment Opportunities</h3>
+                    <p>
+                        For investors seeking to grow their portfolio, we identify and secure properties with strong return potential. Our investment services focus on:
+                    </p>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check-circle"></i> High-Yield Rental Properties</li>
+                        <li><i class="fas fa-check-circle"></i> Development Projects & Land</li>
+                        <li><i class="fas fa-check-circle"></i> Commercial Leasing Opportunities</li>
+                        <li><i class="fas fa-check-circle"></i> Real Estate Investment Trusts (REITs)</li>
+                    </ul>
+                    <div class="expertise-cta">
+                        <a href="#contact" class="btn btn-accent">Explore Investments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="coming-soon-notice">
+            <div class="notice-icon">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="notice-content">
+                <h3>Property Listings Coming Soon</h3>
+                <p>
+                    Our comprehensive property database is currently being updated with our latest exclusive listings. Contact our team to discuss your specific property requirements, and we'll provide personalized recommendations from our current portfolio.
+                </p>
+                <a href="#contact" class="btn btn-accent-outline mt-4">Contact Our Team</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Testimonials -->
     <section class="section testimonials-section">
@@ -256,7 +400,7 @@
                     </p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="images/client-1.jpg" alt="Mr Ibrahim Babatunde">
+                          <!--  <img src="images/client-1.jpg" alt="Mr Ibrahim Babatunde"> -->
                         </div>
                         <div class="author-info">
                             <h4>Mr Ibrahim Babatunde</h4>
@@ -275,7 +419,7 @@
                     </p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="images/client-2.jpg" alt="Mr Raphael David">
+                          <!--  <img src="images/client-2.jpg" alt="Mr Raphael David">-->
                         </div>
                         <div class="author-info">
                             <h4>Mr Raphael David</h4>
@@ -294,7 +438,7 @@
                     </p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="images/client-3.jpg" alt="Mrs. Adeola Johnson">
+                          <!--  <img src="images/client-3.jpg" alt="Mrs. Adeola Johnson">  -->
                         </div>
                         <div class="author-info">
                             <h4>Mrs. Adeola Johnson</h4>
@@ -344,7 +488,8 @@
                             </div>
                             <div>
                                 <h3>Visit Us</h3>
-                                <p>Victoria Island, Lagos, Nigeria</p>
+                                <p>4 Bathlomew Ezeogu Street, Oke Alfa, Lagos
+                                </p>
                             </div>
                         </div>
                         
@@ -453,8 +598,8 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div>
-                        <p>Tavern: Opposite Johnny Adex Motors, Ososami Ibadan</p>
-                        <p>Trendy: 640 Lagos Abeokuta Expressway, By FCMB Salolo, Lagos</p>
+                        
+                    <p>Realtors: 4 Bathlomew Ezeogu Street, Oke Alfa, Lagos</p>
                     </div>
                 </div>
                 <div class="footer-contact-item">
@@ -472,7 +617,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div>
-                        <p>streetngsl@gmail.com</p>
+                        <p>realtors@streetngsl.com</p>
                     </div>
                 </div>
             </div>
@@ -485,6 +630,26 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="public/js/main.js"></script>
+    <script src="public/js/hero-section.js" defer></script>
+    <script src="public/js/navbar-color.js"></script>
+    <script src="public/js/hamburger-fix.js"></script>
+
+    <script>
+        // Inline emergency fix for hamburger menu
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuToggle = document.querySelector('.navbar-toggle');
+            var mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.onclick = function(e) {
+                    e.preventDefault();
+                    mobileMenu.classList.toggle('active');
+                    console.log('Hamburger clicked, menu is now:', 
+                              mobileMenu.classList.contains('active') ? 'active' : 'inactive');
+                };
+            }
+        });
+    </script>
 </body>
 </html>

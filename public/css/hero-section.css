@@ -1,0 +1,109 @@
+/* Hero Section with Custom Transitions */
+
+.hero {
+    position: relative;
+    height: 85vh;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: #1c1c1c; /* Fallback color if something goes wrong */
+}
+
+/* Slides container */
+.hero-slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Individual slide styling */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    transform: translateX(100%); /* Default: slides come from right side */
+}
+
+/* Active slide */
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 1;
+}
+
+/* Add a linear gradient overlay to all slides */
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    z-index: 0;
+}
+
+/* Third slide specifically comes from bottom */
+.slide:nth-child(3) {
+    transform: translateY(100%);
+}
+.slide:nth-child(3).active {
+    transform: translateY(0);
+}
+
+/* Content styling */
+.hero .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Button styling enhancement */
+.hero .btn {
+    position: relative;
+    z-index: 10;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+}

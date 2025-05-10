@@ -6,12 +6,13 @@
     <meta name="description" content="StreetNG - Offering fine dining, precision tailoring, and curated real estate services">
     <title>StreetNG - Three Passions, One Mission</title>
     <!-- CSS Files -->
-    <link rel="stylesheet" href="/streetngsl/public/css/style.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/navbar.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/footer.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/home.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link rel="stylesheet" href="public/css/footer.css">
+    <link rel="stylesheet" href="public/css/home.css">
+    <link rel="stylesheet" href="public/css/fixes.css">
     
-    <link href="/streetngsl/public/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/hero-section.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -32,7 +33,7 @@
                 <a href="contact.html">Contact</a>
             </div>
             
-            <button class="navbar-toggle">
+            <button class="navbar-toggle" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -47,11 +48,17 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('public/images/hero-bg.jpg') center/cover no-repeat; height: 85vh; display: flex; align-items: center; color: white; text-align: center;">
+    <header class="hero">
+        <div class="hero-slides">
+            <!-- Using placeholder images that should work even if original images not found -->
+            <div class="slide" style="background-image: url('public/images/hero1.jpg');"></div>
+            <div class="slide" style="background-image: url('public/images/hero2.jpg');"></div>
+            <div class="slide" style="background-image: url('public/images/tailor-studio.jpg');"></div>
+        </div>
+    
         <div class="container">
-            <h1 style="text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);">Three Passions, One Mission</h1>
-            <p style="font-size: 1.25rem; max-width: 800px; margin: 1.5rem auto; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);">
+            <h1>Three Passions, One Mission</h1>
+            <p>
                 At StreetNG, we blend the art of fine dining, precision tailoring, and curated real estate to redefine luxury living. Whether you're here for a memorable meal, a handcrafted wardrobe, or your dream home, excellence is our signature.
             </p>
             <a href="#services" class="btn btn-primary">Discover Our Services</a>
@@ -126,9 +133,14 @@
                     </p>
                 </div>
                 <div class="about-image-container">
-                    <div class="about-background"></div>
-                    <img src="public/images/logo.png" alt="About StreetNG" class="about-logo">
+                    <div class="logo-frame">
+                        <div class="blue-square"></div>
+                        <div class="logo-wrapper">
+                            <img src="public/images/logo.png" alt="About StreetNG" class="about-logo">
+                        </div>
+                    </div>
                 </div>
+            </div>
             </div>
         </div>
     </section>
@@ -191,7 +203,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="section" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/cta-bg.jpg') center/cover no-repeat; color: white; text-align: center;">
+    <section class="section" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('public/images/cta-bg.jpg') center/cover no-repeat; color: white; text-align: center;">
         <div class="container">
             <h2>Experience the StreetNG Difference</h2>
             <p style="max-width: 700px; margin: 1.5rem auto;">
@@ -269,7 +281,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div>
-                        <p>streetngsl@gmail.com</p>
+                        <p>info@streetngsl.com</p>
                     </div>
                 </div>
             </div>
@@ -282,6 +294,27 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="public/js/main.js"></script>
+    <script src="public/js/hero-section.js" defer></script>
+    <script src="public/js/navbar-color.js"></script>
+    <script src="public/js/hamburger-fix.js"></script>
+
+    <script>
+        // Inline emergency fix for hamburger menu
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuToggle = document.querySelector('.navbar-toggle');
+            var mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.onclick = function(e) {
+                    e.preventDefault();
+                    mobileMenu.classList.toggle('active');
+                    console.log('Hamburger clicked, menu is now:', 
+                              mobileMenu.classList.contains('active') ? 'active' : 'inactive');
+                };
+            }
+        });
+    </script>
+    
 </body>
 </html>

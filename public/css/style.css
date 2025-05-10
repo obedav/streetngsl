@@ -12,9 +12,7 @@
     --dark: #212121;
     --white: #FFFFFF;
     
-    /* Font families */
-    --heading-font: 'Playfair Display', serif;
-    --body-font: 'Poppins', sans-serif;
+    
 }
 
 /* Base Styles */
@@ -251,3 +249,5 @@ img {
         padding: 3rem 0;
     }
 }
+
+/* Hero Section */

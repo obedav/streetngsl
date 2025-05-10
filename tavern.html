@@ -5,31 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Street Tavern - Authentic Nigerian cuisine with fresh, local ingredients in Ibadan">
     <title>Street Tavern - Taste the Heart of Nigeria</title>
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="/streetngsl/public/css/style.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/navbar.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/footer.css">
-    <link rel="stylesheet" href="/streetngsl/public/css/tavern.css">
+<!-- CSS Files -->
+<link rel="stylesheet" href="public/css/style.css">
+<link rel="stylesheet" href="public/css/navbar.css">
+<link rel="stylesheet" href="public/css/footer.css">
+<link rel="stylesheet" href="public/css/tavern.css">
+<link rel="stylesheet" href="public/css/hero-section.css">
+   
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="container navbar-container">
-            <a href="index.html" class="navbar-logo">Street<span>NG</span></a>
+            <div class="container navbar-container">
+                <a href="index.html" class="navbar-logo">
+                    <img src="public/images/tavern-logo.jpg" alt="StreetNG Logo" height="40">
+                    <span class="logo-text">Street<span>NG</span></span>
+                </a>
             
-            <div class="navbar-menu">
-                <a href="index.html">Home</a>
-                <a href="tavern.html" class="active">Street Tavern</a>
-                <a href="trendy.html">Street Trendy</a>
-                <a href="realtors.html">Street Realtors</a>
-                <a href="contact.html">Contact</a>
-            </div>
+                <div class="navbar-menu">
+                    <a href="index.html">Home</a>
+                    <a href="tavern.html" class="active">Street Tavern</a>
+                    <a href="trendy.html">Street Trendy</a>
+                    <a href="realtors.html">Street Realtors</a>
+                    <a href="contact.html">Contact</a>
+                </div>
             
-            <button class="navbar-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
+                <button class="navbar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
         </div>
         
         <!-- Mobile Menu -->
@@ -42,16 +47,26 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="tavern-hero">
-        <div class="container">
-            <h1>Taste the Heart of Nigeria, Right Here in Ibadan</h1>
-            <p class="hero-subtitle">
-                Street Tavern offers authentic Nigerian flavors, fresh local ingredients, and comforting classics, showcasing the country's rich culinary heritage.
-            </p>
-            <a href="#food-section" class="btn btn-primary">Explore Our Menu</a>
-        </div>
-    </header>
+<!-- Hero Section -->
+<header class="hero tavern-hero">
+    <div class="hero-slides">
+        <!-- Using tavern-specific images -->
+        <div class="slide" style="background-image: url('public/images/tavern-hero1.jpg');"></div>
+        <div class="slide" style="background-image: url('public/images/tavern-hero2.jpg');"></div>
+        <div class="slide" style="background-image: url('public/images/food-1.jpg');"></div>
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+        <h1>Taste the Heart of Nigeria, Right Here in Ibadan</h1>
+        <p class="hero-subtitle">
+            Street Tavern offers authentic Nigerian flavors, fresh local ingredients, and comforting classics, showcasing the country's rich culinary heritage.
+        </p>
+        <a href="#food-section" class="btn btn-primary">Explore Our Menu</a>
+    </div>
+</header>
+
 
     <!-- Food Section -->
     <section id="food-section" class="section">
@@ -108,11 +123,12 @@
                         <p>Succulent chunks of grilled goat meat, tossed in a spicy pepper sauce with onions and bell peppers.</p>
                     </div>
                 </div>
+                </div>
+            
+                <div class="text-center mt-12 menu-button-container">
+                    <a href="#" class="btn btn-primary">View Full Menu</a>
             </div>
             
-            <div class="text-center mt-12">
-                <a href="#" class="btn btn-primary">View Full Menu</a>
-            </div>
         </div>
     </section>
 
@@ -188,7 +204,7 @@
                     </p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="images/avatar-1.jpg" alt="Mr Ayodele">
+                           <!-- <img src="images/avatar-1.jpg" alt="Mr Ayodele"> -->
                         </div>
                         <div class="author-info">
                             <h4>Mr Ayodele</h4>
@@ -207,7 +223,7 @@
                     </p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="images/avatar-2.jpg" alt="Mr Femi">
+                           <!-- <img src="images/avatar-2.jpg" alt="Mr Femi">  -->
                         </div>
                         <div class="author-info">
                             <h4>Mr Femi</h4>
@@ -254,7 +270,7 @@
                             </div>
                             <div>
                                 <h4>Email</h4>
-                                <p>streetngsl@gmail.com</p>
+                                <p>tavern@streetngsl.com</p>
                             </div>
                         </div>
                         
@@ -269,11 +285,7 @@
                         </div>
                     </div>
                     
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    </div>
+ 
                 </div>
                 
                 <div class="contact-map">
@@ -347,7 +359,7 @@
                     </div>
                     <div>
                         <p>Tavern: Opposite Johnny Adex Motors, Ososami Ibadan</p>
-                        <p>Trendy: 640 Lagos Abeokuta Expressway, By FCMB Salolo, Lagos</p>
+                        
                     </div>
                 </div>
                 <div class="footer-contact-item">
@@ -365,7 +377,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div>
-                        <p>streetngsl@gmail.com</p>
+                        <p>tavern@streetngsl.com</p>
                     </div>
                 </div>
             </div>
@@ -378,6 +390,26 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="public/js/main.js"></script>
+    <script src="public/js/hero-section.js" defer></script>
+    <script src="public/js/navbar-color.js"></script>
+    <script src="public/js/hamburger-fix.js"></script>
+
+    <script>
+        // Inline emergency fix for hamburger menu
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuToggle = document.querySelector('.navbar-toggle');
+            var mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.onclick = function(e) {
+                    e.preventDefault();
+                    mobileMenu.classList.toggle('active');
+                    console.log('Hamburger clicked, menu is now:', 
+                              mobileMenu.classList.contains('active') ? 'active' : 'inactive');
+                };
+            }
+        });
+    </script>
 </body>
 </html>
