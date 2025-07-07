@@ -3,7 +3,7 @@
 **A comprehensive business ecosystem combining restaurant services, bespoke tailoring, and property management under one unified digital platform. Built to showcase premium services across Nigeria's growing business landscape.**
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Platform-blue?style=for-the-badge)](#)
-[![GitHub](https://img.shields.io/badge/📂_GitHub-Source_Code-black?style=for-the-badge)](https://streetngsl.com/)
+[![Live Site](https://img.shields.io/badge/🌐_Live_Site-streetngsl.com-blue?style=for-the-badge)](https://streetngsl.com/)
 [![Business](https://img.shields.io/badge/💼_Business-Multi_Service-green?style=for-the-badge)](#)
 
 ## 🎯 Business Overview
